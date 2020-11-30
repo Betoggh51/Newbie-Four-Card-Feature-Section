@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+/********************** Eliminating paddings and margins ******************************/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*************************************************/
+html{
+    height: 100%;
+}
+
+body{
+    min-height: 100%;
+    background-color: hsl(0, 0%, 98%);
+}
+/******************** Styling the upper part of the page ***********************/
+.main-container{
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 3% 15%;
+}
+
+.promotion, .modules-container>p{
+    font-size: 15px;
+}
+
+.promotion{
+    width: 50%;
+}
+
+/********************* Styling the down part of the page ******************************/
+.modules-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    justify-items: center;
+} 
+
+.module{
+    height: 44%;
+    width: 60%;
+    background-position: 90% 85%;
+    background-repeat: no-repeat;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 9px;
+    padding: 5%;
+}
+
+.center-module{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex-end{
+    display: flex;
+    justify-content: flex-end;
+}
+.supervisor-module{
+    background-image: url(images/icon-supervisor.svg);
+}
+
+.teambuilder-module{
+    background-image: url(images/icon-team-builder.svg);
+    margin-bottom: 6%;
+}
+
+.karma-module{
+    background-image: url(images/icon-karma.svg);
+}
+
+.flex-start{
+    display: flex;
+    justify-content: flex-start;
+}
+.calculator-module{
+    background-image: url(images/icon-calculator.svg);
+}
+
