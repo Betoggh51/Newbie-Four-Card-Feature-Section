@@ -17,8 +17,6 @@ body{
 }
 /******************** Styling the upper part of the page ***********************/
 .main-container{
-    display: grid;
-    grid-template-rows: 1fr 2fr;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -41,50 +39,58 @@ body{
 /********************* Styling the down part of the page ******************************/
 .modules-container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
-    justify-items: center;
-} 
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
 
 .module{
-    height: 44%;
-    width: 60%;
     background-position: 90% 85%;
     background-repeat: no-repeat;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 9px;
     padding: 5%;
+    width: 65%;
+    height: 100%;
 }
 
-.center-module{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-.flex-end{
-    display: flex;
-    justify-content: flex-end;
-}
 .supervisor-module{
     background-image: url(images/icon-supervisor.svg);
+/*     justify-self: end;
+ */
+    /* this position the element on the (2,1) so, its second row, first column*/
+    grid-area: 2 / 1;
+    justify-self: end;
 }
+
 
 .teambuilder-module{
     background-image: url(images/icon-team-builder.svg);
-    margin-bottom: 6%;
+
+    /* 1 / 2 => (1,2) so is first row, second column*/
+    grid-area: 1 / 2;
+    justify-self: center;
 }
 
 .karma-module{
     background-image: url(images/icon-karma.svg);
+
+    /* 3 / 2 => (3,2) so its the third row and second column*/
+    grid-area: 3 / 2;
+    justify-self: center;
+
 }
 
-.flex-start{
-    display: flex;
-    justify-content: flex-start;
-}
 .calculator-module{
     background-image: url(images/icon-calculator.svg);
+/*     justify-self: start;
+ */
+    /* 2 / 3 => (2,3) so this is the second row and third column*/
+    grid-area: 2 / 3;
 }
 
+.module-description{
+    width: 82%;
+    font-size: 12px;
+}
