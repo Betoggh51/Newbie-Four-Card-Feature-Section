@@ -39,8 +39,9 @@ body{
 /********************* Styling the down part of the page ******************************/
 .modules-container{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 0.5fr repeat(3, 1fr) 0.5fr;
+    grid-template-rows: repeat(3, 2fr);
+    column-gap: 32px;
 }
 
 .module{
@@ -50,47 +51,80 @@ body{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 9px;
     padding: 5%;
-    width: 65%;
-    height: 100%;
+    width: 100%;
+    height: 200px;
 }
-
 
 .supervisor-module{
     background-image: url(images/icon-supervisor.svg);
-/*     justify-self: end;
- */
-    /* this position the element on the (2,1) so, its second row, first column*/
-    grid-area: 2 / 1;
-    justify-self: end;
-}
 
+    /* this position the element on the (2,1) so, its second row, first column*/
+    grid-area: 2 / 2;
+    justify-self: end;
+    border-top: 4px solid hsl(180, 62%, 55%);
+}
 
 .teambuilder-module{
     background-image: url(images/icon-team-builder.svg);
 
     /* 1 / 2 => (1,2) so is first row, second column*/
-    grid-area: 1 / 2;
+    grid-area: 1 / 3;
     justify-self: center;
+    border-top: 4px solid hsl(0, 78%, 62%);
 }
 
 .karma-module{
     background-image: url(images/icon-karma.svg);
 
     /* 3 / 2 => (3,2) so its the third row and second column*/
-    grid-area: 3 / 2;
+    grid-area: 3 / 3;
     justify-self: center;
-
+    border-top: 4px solid hsl(34, 97%, 64%);
 }
 
 .calculator-module{
     background-image: url(images/icon-calculator.svg);
-/*     justify-self: start;
- */
+
     /* 2 / 3 => (2,3) so this is the second row and third column*/
-    grid-area: 2 / 3;
+    grid-area: 2 / 4;
+    border-top: 4px solid hsl(212, 86%, 64%);
 }
 
 .module-description{
     width: 82%;
     font-size: 12px;
+}
+
+.module-description, .slogan, .promotion{
+    color: hsl(229, 6%, 66%);
+}
+
+.title{
+    color: hsl(234, 12%, 34%);
+}
+
+/***************************** Mobile Styles ***********************************/
+@media only screen and (max-width: 750px){
+    .modules-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .module{
+        margin: 15px auto;
+        width: 80%;
+    }
+
+    .main-text{
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .promotion{
+        width: 90%;
+    }
 }
