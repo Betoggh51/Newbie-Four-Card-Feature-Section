@@ -12,5 +12,5 @@ Your users should:
 
 - View the optimal layout for the site depending on their device's screen size
 
-
-
+## GitHub Page
+Published at: https://betoggh51.github.io/Newbie-Four-Card-Feature-Section/
